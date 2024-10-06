@@ -1,12 +1,9 @@
-#ifndef PROCESS_H  
+#ifndef PROCESS_H
 #define PROCESS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <time.h>
-
-void sleep_random();
 void fork_pattern_one(int num_processes);
+void fork_pattern_two(int num_processes);
+void choose_pattern(int pattern, int num_processes);
+int rand_time();
 
-#endif // PROCESS_H
+#endif  // PROCESS_H
