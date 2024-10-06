@@ -1,7 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "process.h"
+#include "pattern1.h"
+#include "pattern2.h"
+
+void createprocess(int pattern, int num_processes) {
+  if (pattern == 1) {
+    fork_pattern_one(num_processes);
+  } else if (pattern == 2) {
+    fork_pattern_two(num_processes);
+  } else {
+    perror("Invalid pattern number\n");
+    exit(1);
+  }
+}
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
@@ -17,7 +29,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  choose_pattern(pattern, num_processes);
+  createprocess(pattern, num_processes);
 
   return 0;
 }
