@@ -1,0 +1,17 @@
+Parent: Creating 5 child processes
+Child 1 (PID: 6765): starting
+Child 1 (PID: 6765), sleeping 3 seconds after creating child 2
+Child 0 (PID: 6764): starting
+Child 0 (PID: 6764), sleeping 5 seconds after creating child 1
+Child 3 (PID: 6767): starting
+Child 3 (PID: 6767), sleeping 5 seconds after creating child 4
+Child 4 (PID: 6768): starting
+Child 4 (PID: 6768) [no children created] sleeping 6 seconds
+Child 2 (PID: 6766): starting
+Child 2 (PID: 6766), sleeping 7 seconds after creating child 3
+Child 0 (PID: 6764) has exited
+Child 1 (PID: 6765) has exited
+Child 2 (PID: 6766) has exited
+Child 3 (PID: 6767) has exited
+Child 4 (PID: 6768) has exited
+** Pattern 2: All children have exited **

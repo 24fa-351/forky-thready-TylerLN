@@ -1,0 +1,120 @@
+Pattern 1:
+
+Parent: Creating 15 child processes
+Parent: Created Child Process 0 (PID: 11942)
+Parent: Created Child Process 1 (PID: 11943)
+Parent: Created Child Process 2 (PID: 11944)
+Parent: Created Child Process 3 (PID: 11945)
+Parent: Created Child Process 4 (PID: 11946)
+Parent: Created Child Process 5 (PID: 11947)
+Parent: Created Child Process 7 (PID: 11949)
+Parent: Created Child Process 6 (PID: 11948)
+Parent: Created Child Process 8 (PID: 11950)
+Parent: Created Child Process 9 (PID: 11951)
+Parent: Created Child Process 10 (PID: 11952)
+Parent: Created Child Process 11 (PID: 11953)
+Parent: Created Child Process 12 (PID: 11954)
+Parent: Created Child Process 13 (PID: 11955)
+Parent: Created Child Process 14 (PID: 11956)
+Child Process 0 (PID: 11942) created, will sleep for 1 seconds
+Child Process 1 (PID: 11943) created, will sleep for 7 seconds
+Child Process 2 (PID: 11944) created, will sleep for 8 seconds
+Child Process 3 (PID: 11945) created, will sleep for 6 seconds
+Child Process 4 (PID: 11946) created, will sleep for 4 seconds
+Child Process 5 (PID: 11947) created, will sleep for 7 seconds
+Child Process 6 (PID: 11948) created, will sleep for 2 seconds
+Child Process 7 (PID: 11949) created, will sleep for 1 seconds
+Child Process 8 (PID: 11950) created, will sleep for 3 seconds
+Child Process 9 (PID: 11951) created, will sleep for 2 seconds
+Child Process 10 (PID: 11952) created, will sleep for 6 seconds
+Child Process 11 (PID: 11953) created, will sleep for 6 seconds
+Child Process 12 (PID: 11954) created, will sleep for 7 seconds
+Child Process 13 (PID: 11955) created, will sleep for 8 seconds
+Child Process 14 (PID: 11956) created, will sleep for 5 seconds
+All Child Processes Created
+Child Process 0 (PID: 11942) finished sleeping and is exiting
+Child Process 1 (PID: 11943) finished sleeping and is exiting
+Child Process 2 (PID: 11944) finished sleeping and is exiting
+Child Process 3 (PID: 11945) finished sleeping and is exiting
+Child Process 4 (PID: 11946) finished sleeping and is exiting
+Child Process 5 (PID: 11947) finished sleeping and is exiting
+Child Process 6 (PID: 11948) finished sleeping and is exiting
+Child Process 7 (PID: 11949) finished sleeping and is exiting
+Child Process 8 (PID: 11950) finished sleeping and is exiting
+Child Process 9 (PID: 11951) finished sleeping and is exiting
+Child Process 10 (PID: 11952) finished sleeping and is exiting
+Child Process 11 (PID: 11953) finished sleeping and is exiting
+Child Process 12 (PID: 11954) finished sleeping and is exiting
+Child Process 13 (PID: 11955) finished sleeping and is exiting
+Child Process 14 (PID: 11956) finished sleeping and is exiting
+All child processes exited
+
+
+
+Pattern 2:
+
+Parent: Creating 5 child processes
+Child 0 (PID: 14837): starting
+Child 0 (PID: 14837), sleeping 2 seconds after creating child 1
+Child 1 (PID: 14856): starting
+Child 1 (PID: 14856), sleeping 5 seconds after creating child 2
+Child 2 (PID: 14875): starting
+Child 2 (PID: 14875), sleeping 2 seconds after creating child 3
+Child 3 (PID: 14879): starting
+Child 3 (PID: 14879), sleeping 1 seconds after creating child 4
+Child 4 (PID: 14883): starting
+Child 4 (PID: 14883) [no children created] sleeping 1 seconds
+Child Process 0 (PID: 14837) finished sleeping and is exiting
+Child Process 1 (PID: 14856) finished sleeping and is exiting
+Child Process 2 (PID: 14875) finished sleeping and is exiting
+Child Process 3 (PID: 14879) finished sleeping and is exiting
+Child Process 4 (PID: 14883) finished sleeping and is exiting
+** Pattern 2: All children have exited **
+
+Parent: Creating 15 child processes
+Child 0 (PID: 12708): starting
+Child 0 (PID: 12708), sleeping 4 seconds after creating child 1
+Child 1 (PID: 12736): starting
+Child 1 (PID: 12736), sleeping 5 seconds after creating child 2
+Child 2 (PID: 12752): starting
+Child 2 (PID: 12752), sleeping 8 seconds after creating child 3
+Child 3 (PID: 12779): starting
+Child 3 (PID: 12779), sleeping 2 seconds after creating child 4
+Child 4 (PID: 12780): starting
+Child 4 (PID: 12780), sleeping 2 seconds after creating child 5
+Child 5 (PID: 12790): starting
+Child 5 (PID: 12790), sleeping 2 seconds after creating child 6
+Child 6 (PID: 12794): starting
+Child 6 (PID: 12794), sleeping 7 seconds after creating child 7
+Child 7 (PID: 12810): starting
+Child 7 (PID: 12810), sleeping 4 seconds after creating child 8
+Child 8 (PID: 12823): starting
+Child 8 (PID: 12823), sleeping 7 seconds after creating child 9
+Child 9 (PID: 12839): starting
+Child 9 (PID: 12839), sleeping 7 seconds after creating child 10
+Child 10 (PID: 12855): starting
+Child 10 (PID: 12855), sleeping 3 seconds after creating child 11
+Child 11 (PID: 12865): starting
+Child 11 (PID: 12865), sleeping 3 seconds after creating child 12
+Child 12 (PID: 12869): starting
+Child 12 (PID: 12869), sleeping 1 seconds after creating child 13
+Child 13 (PID: 12879): starting
+Child 13 (PID: 12879), sleeping 4 seconds after creating child 14
+Child 14 (PID: 12886): starting
+Child 14 (PID: 12886) [no children created] sleeping 5 seconds
+Child Process 0 (PID: 12708) finished sleeping and is exiting
+Child Process 1 (PID: 12736) finished sleeping and is exiting
+Child Process 2 (PID: 12752) finished sleeping and is exiting
+Child Process 3 (PID: 12779) finished sleeping and is exiting
+Child Process 4 (PID: 12780) finished sleeping and is exiting
+Child Process 5 (PID: 12790) finished sleeping and is exiting
+Child Process 6 (PID: 12794) finished sleeping and is exiting
+Child Process 7 (PID: 12810) finished sleeping and is exiting
+Child Process 8 (PID: 12823) finished sleeping and is exiting
+Child Process 9 (PID: 12839) finished sleeping and is exiting
+Child Process 10 (PID: 12855) finished sleeping and is exiting
+Child Process 11 (PID: 12865) finished sleeping and is exiting
+Child Process 12 (PID: 12869) finished sleeping and is exiting
+Child Process 13 (PID: 12879) finished sleeping and is exiting
+Child Process 14 (PID: 12886) finished sleeping and is exiting
+** Pattern 2: All children have exited **

@@ -1,0 +1,5 @@
+fork: fork.c process.c
+	gcc fork.c process.c -o fork
+
+clean:
+	rm -f fork
