@@ -1,5 +1,25 @@
 Pattern 1:
 
+Parent: Creating 5 child processes
+Parent: Created Child Process 0 (PID: 15131)
+Parent: Created Child Process 1 (PID: 15132)
+Parent: Created Child Process 2 (PID: 15133)
+Parent: Created Child Process 3 (PID: 15134)
+Parent: Created Child Process 4 (PID: 15135)
+Child Process 0 (PID: 15131) created, will sleep for 8 seconds
+Child Process 1 (PID: 15132) created, will sleep for 7 seconds
+Child Process 2 (PID: 15133) created, will sleep for 8 seconds
+Child Process 3 (PID: 15134) created, will sleep for 6 seconds
+Child Process 4 (PID: 15135) created, will sleep for 6 seconds
+All Child Processes Created
+Child Process 0 (PID: 15131) finished sleeping and is exiting
+Child Process 1 (PID: 15132) finished sleeping and is exiting
+Child Process 2 (PID: 15133) finished sleeping and is exiting
+Child Process 3 (PID: 15134) finished sleeping and is exiting
+Child Process 4 (PID: 15135) finished sleeping and is exiting
+All child processes exited
+
+
 Parent: Creating 15 child processes
 Parent: Created Child Process 0 (PID: 11942)
 Parent: Created Child Process 1 (PID: 11943)
@@ -47,11 +67,29 @@ Child Process 11 (PID: 11953) finished sleeping and is exiting
 Child Process 12 (PID: 11954) finished sleeping and is exiting
 Child Process 13 (PID: 11955) finished sleeping and is exiting
 Child Process 14 (PID: 11956) finished sleeping and is exiting
-All child processes exited
+** Pattern 1: All children have exited **
 
 
 
 Pattern 2:
+
+Parent: Creating 5 child processes
+Child 0 (PID: 14837): starting
+Child 0 (PID: 14837), sleeping 2 seconds after creating child 1
+Child 1 (PID: 14856): starting
+Child 1 (PID: 14856), sleeping 5 seconds after creating child 2
+Child 2 (PID: 14875): starting
+Child 2 (PID: 14875), sleeping 2 seconds after creating child 3
+Child 3 (PID: 14879): starting
+Child 3 (PID: 14879), sleeping 1 seconds after creating child 4
+Child 4 (PID: 14883): starting
+Child 4 (PID: 14883) [no children created] sleeping 1 seconds
+Child Process 0 (PID: 14837) finished sleeping and is exiting
+Child Process 1 (PID: 14856) finished sleeping and is exiting
+Child Process 2 (PID: 14875) finished sleeping and is exiting
+Child Process 3 (PID: 14879) finished sleeping and is exiting
+Child Process 4 (PID: 14883) finished sleeping and is exiting
+** Pattern 2: All children have exited **
 
 Parent: Creating 15 child processes
 Child 0 (PID: 12708): starting

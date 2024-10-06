@@ -41,11 +41,11 @@ void fork_pattern_one(int num_processes) {
 
   printf("All Child Processes Created\n");
 
-  for (int ix = 0; ix < num_processes; ix++) {
+  for (int iy = 0; iy < num_processes; iy++) {
     wait(NULL);
-    printf("Child Process %d (PID: %d) finished sleeping and is exiting\n", ix,
-           pids_array[ix]);
+    printf("Child Process %d (PID: %d) finished sleeping and is exiting\n", iy,
+           pids_array[iy]);
   }
 
-  printf("All child processes exited\n");
+  printf("** Pattern 1: All children have exited **\n");
 }
