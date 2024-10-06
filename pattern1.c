@@ -8,43 +8,42 @@
 #include <unistd.h>
 
 void fork_pattern_one(int num_processes) {
-  pid_t pid;
-  pid_t pids_array[num_processes];
+  pid_t child_array[num_processes];
   int sleep_times[num_processes];
   srand(time(NULL));
 
-  printf("Parent: Creating %d child processes\n", num_processes);
+  for (int sleep_index = 0; sleep_index < num_processes; sleep_index++) {
+    sleep_times[sleep_index] = rand() % 8 + 1;
+  }
+
+  printf("** Pattern 1: creating %d processes **\n", num_processes);
   fflush(stdout);
 
   for (int child_index = 0; child_index < num_processes; child_index++) {
-    sleep_times[child_index] = rand() % 8 + 1;
-    pid = fork();
+    pid_t pid = fork();
 
     if (pid < 0) {
       perror("Fork Failed");
       exit(1);
     } else if (pid == 0) {
-      printf("Parent: Created Child Process %d (PID: %d)\n", child_index,
+      printf("Parent: created Child Process %d (PID: %d)\n", child_index,
              getpid());
+      printf("Process %d (PID: %d) will sleep for %d seconds\n", child_index,
+             getpid(), sleep_times[child_index]);
+
+      sleep(sleep_times[child_index]);
+
+      printf("Process %d (PID: %d) sleeping\n", child_index, getpid());
       exit(0);
     } else {
-      pids_array[child_index] = pid;
+      child_array[child_index] = pid;
     }
   }
 
   for (int ix = 0; ix < num_processes; ix++) {
-    wait(NULL);
-    printf("Child Process %d (PID: %d) created, will sleep for %d seconds\n",
-           ix, pids_array[ix], sleep_times[ix]);
-    sleep(sleep_times[ix]);
-  }
-
-  printf("All Child Processes Created\n");
-
-  for (int iy = 0; iy < num_processes; iy++) {
-    wait(NULL);
-    printf("Child Process %d (PID: %d) finished sleeping and is exiting\n", iy,
-           pids_array[iy]);
+    waitpid(child_array[ix], NULL, 0);
+    printf("Parent: Child Process %d (PID: %d) has exited\n", ix,
+           child_array[ix]);
   }
 
   printf("** Pattern 1: All children have exited **\n");
