@@ -4,7 +4,7 @@
 #include "pattern1.h"
 #include "pattern2.h"
 
-void createprocess(int pattern, int num_processes) {
+void create_process(int pattern, int num_processes) {
   if (pattern == 1) {
     fork_pattern_one(num_processes);
   } else if (pattern == 2) {
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  createprocess(pattern, num_processes);
+  create_process(pattern, num_processes);
 
   return 0;
 }
