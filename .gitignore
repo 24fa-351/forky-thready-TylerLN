@@ -51,6 +51,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Ignore common executable extensions
+*.exe
+*.out
+*.bin
+
 *.history/
 *.vscode/
 *.github/
+
