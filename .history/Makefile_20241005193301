@@ -1,5 +1,0 @@
-fork: fork.c pattern1.h pattern2.h
-	gcc fork.c pattern1.c pattern2.c -o fork
-
-clean:
-	rm -f fork
