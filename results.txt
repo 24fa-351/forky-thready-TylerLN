@@ -1,49 +1,63 @@
 ** Creating 5 processes (Pattern 1) **
-Process 0 (PID: 11299): starting
-Process 0 (PID: 11299), sleeping for 2 seconds
-Process 1 (PID: 11300): starting
-Process 1 (PID: 11300), sleeping for 2 seconds
-Process 2 (PID: 11301): starting
-Process 2 (PID: 11301), sleeping for 1 seconds
-Process 3 (PID: 11302): starting
-Process 3 (PID: 11302), sleeping for 7 seconds
-Process 4 (PID: 11303): starting
-Process 4 (PID: 11303), sleeping for 3 seconds
-Process 2 (PID: 11301) has finished sleeping
-Process 0 (PID: 11299) has finished sleeping
-Process 1 (PID: 11300) has finished sleeping
-Parent: Child 0 (PID: 11299) has exited
-Parent: Child 1 (PID: 11300) has exited
-Parent: Child 2 (PID: 11301) has exited
-Process 4 (PID: 11303) has finished sleeping
-Process 3 (PID: 11302) has finished sleeping
-Parent: Child 3 (PID: 11302) has exited
-Parent: Child 4 (PID: 11303) has exited
+Process 0 (PID: 24490), will sleep for 5 seconds
+Process 0 (PID: 24490): starting
+Process 0 (PID: 24490), sleeping for 5 seconds
+Process 1 (PID: 24491), will sleep for 7 seconds
+Process 1 (PID: 24491): starting
+Process 1 (PID: 24491), sleeping for 7 seconds
+Process 2 (PID: 24492), will sleep for 5 seconds
+Process 2 (PID: 24492): starting
+Process 2 (PID: 24492), sleeping for 5 seconds
+Process 3 (PID: 24493), will sleep for 2 seconds
+Process 3 (PID: 24493): starting
+Process 3 (PID: 24493), sleeping for 2 seconds
+Process 4 (PID: 24494), will sleep for 7 seconds
+Process 4 (PID: 24494): starting
+Process 4 (PID: 24494), sleeping for 7 seconds
+Process 3 (PID: 24493) has finished sleeping
+Process 0 (PID: 24490) has finished sleeping
+Process 2 (PID: 24492) has finished sleeping
+Parent: Child 0 (PID: 24490) has exited
+Process 1 (PID: 24491) has finished sleeping
+Process 4 (PID: 24494) has finished sleeping
+Parent: Child 1 (PID: 24491) has exited
+Parent: Child 2 (PID: 24492) has exited
+Parent: Child 3 (PID: 24493) has exited
+Parent: Child 4 (PID: 24494) has exited
 ** All children have exited **
 
+
+./fork 2 5
 ** Creating 5 processes (Pattern 2) **
-Process 0 (PID: 11438): starting
-Process 0 (PID: 11438) creating child 1
-Process 0 (PID: 11438), sleeping for 8 seconds
-Process 1 (PID: 11439): starting
-Process 1 (PID: 11439) creating child 2
-Process 1 (PID: 11439), sleeping for 2 seconds
-Process 2 (PID: 11440): starting
-Process 2 (PID: 11440) creating child 3
-Process 2 (PID: 11440), sleeping for 6 seconds
-Process 3 (PID: 11441): starting
-Process 3 (PID: 11441) creating child 4
-Process 3 (PID: 11441), sleeping for 1 seconds
-Process 4 (PID: 11442): starting
-Process 4 (PID: 11442), sleeping for 1 seconds
-Process 3 (PID: 11441) has finished sleeping
-Process 4 (PID: 11442) has finished sleeping
-Process 1 (PID: 11439) has finished sleeping
-Process 2 (PID: 11440) has finished sleeping
-Process 0 (PID: 11438) has finished sleeping
-Parent: Child 0 (PID: 11438) has exited
-Parent: Child 1 (PID: 11439) has exited
-Parent: Child 2 (PID: 11440) has exited
-Parent: Child 3 (PID: 11441) has exited
-Parent: Child 4 (PID: 11442) has exited
+Main created Process 0 (PID: 24630)
+Main created Process 0 (PID: 24630)
+Process 0 (PID: 24630), will sleep for 2 seconds after creating process 1
+Process 0 (PID: 24630): starting
+Process 0 (PID: 24630) creating child 1
+Process 0 (PID: 24630), sleeping for 2 seconds
+Process 1 (PID: 24631), will sleep for 6 seconds after creating process 2
+Process 1 (PID: 24631): starting
+Process 1 (PID: 24631) creating child 2
+Process 1 (PID: 24631), sleeping for 6 seconds
+Process 2 (PID: 24632), will sleep for 3 seconds after creating process 3
+Process 2 (PID: 24632): starting
+Process 2 (PID: 24632) creating child 3
+Process 2 (PID: 24632), sleeping for 3 seconds
+Process 3 (PID: 24633), will sleep for 5 seconds after creating process 4
+Process 3 (PID: 24633): starting
+Process 3 (PID: 24633) creating child 4
+Process 3 (PID: 24633), sleeping for 5 seconds
+Process 4 (PID: 24634), will sleep for 5 seconds after creating process 5
+Process 4 (PID: 24634): starting
+Process 4 (PID: 24634), sleeping for 5 seconds
+Process 0 (PID: 24630) has finished sleeping
+Parent: Child 0 (PID: 24630) has exited
+Process 2 (PID: 24632) has finished sleeping
+Process 3 (PID: 24633) has finished sleeping
+Process 4 (PID: 24634) has finished sleeping
+Process 1 (PID: 24631) has finished sleeping
+Parent: Child 1 (PID: 24631) has exited
+Parent: Child 2 (PID: 24632) has exited
+Parent: Child 3 (PID: 24633) has exited
+Parent: Child 4 (PID: 24634) has exited
 ** All children have exited **

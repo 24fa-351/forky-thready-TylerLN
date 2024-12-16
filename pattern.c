@@ -44,18 +44,47 @@ void fork_processes(int num_processes, int pattern_type) {
            pattern_type);
     fflush(stdout);
 
-    for (int iz = 0; iz < num_processes; iz++) {
-        pid_t pid = fork();
+    if (pattern_type == 1) {
+        for (int iz = 0; iz < num_processes; iz++) {
+            pid_t pid = fork();
 
-        if (pid < 0) {
-            perror("Fork Failed");
-            exit(1);
-        } else if (pid == 0) {
-            child_process(iz, num_processes, sleep_times, pattern_type);
-        } else {
-            child_array[iz] = pid;
+            if (pid < 0) {
+                perror("Fork Failed");
+                exit(1);
+            } else if (pid == 0) {
+                printf("Process %d (PID: %d), will sleep for %d seconds\n", iz,
+                       getpid(), sleep_times[iz]);
+                child_process(iz, num_processes, sleep_times, pattern_type);
+            } else {
+                child_array[iz] = pid;
+            }
         }
-    }
 
-    parent_process(num_processes, child_array);
+        parent_process(num_processes, child_array);
+
+    } else if (pattern_type == 2) {
+        for (int iz = 0; iz < num_processes; iz++) {
+            pid_t pid = fork();
+
+            if (pid < 0) {
+                perror("Fork Failed");
+                exit(1);
+            } else if (pid == 0) {
+                if (iz == 0)
+                    printf("Main created Process 0 (PID: %d)\n", getpid());
+                printf("Process %d (PID: %d), will sleep for %d seconds after "
+                       "creating process %d\n",
+                       iz, getpid(), sleep_times[iz], iz + 1);
+
+                child_process(iz, num_processes, sleep_times, pattern_type);
+            } else {
+                child_array[iz] = pid;
+
+                if (pattern_type == 2 && iz == 0)
+                    printf("Parent created Process 0 (PID: %d)\n", pid);
+            }
+        }
+
+        parent_process(num_processes, child_array);
+    }
 }
