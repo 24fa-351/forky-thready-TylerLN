@@ -7,20 +7,20 @@
 #include <time.h>
 #include <unistd.h>
 
-void child_process(int iz, int num_processes, int *sleep_times,
+void child_process(int jx, int num_processes, int *sleep_times,
                    int pattern_type) {
-    printf("Process %d (PID: %d): starting\n", iz, getpid());
+    printf("Process %d (PID: %d): starting\n", jx, getpid());
 
-    if (pattern_type == 2 && iz < num_processes - 1) {
-        printf("Process %d (PID: %d) creating child %d\n", iz, getpid(),
-               iz + 1);
+    if (pattern_type == 2 && jx < num_processes - 1) {
+        printf("Process %d (PID: %d) creating child %d\n", jx, getpid(),
+               jx + 1);
     }
 
-    printf("Process %d (PID: %d), sleeping for %d seconds\n", iz, getpid(),
-           sleep_times[iz]);
-    sleep(sleep_times[iz]);
+    printf("Process %d (PID: %d), sleeping for %d seconds\n", jx, getpid(),
+           sleep_times[jx]);
+    sleep(sleep_times[jx]);
 
-    printf("Process %d (PID: %d) has finished sleeping\n", iz, getpid());
+    printf("Process %d (PID: %d) has finished sleeping\n", jx, getpid());
     exit(0);
 }
 
