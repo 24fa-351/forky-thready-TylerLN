@@ -7,20 +7,21 @@
 #include <time.h>
 #include <unistd.h>
 
-void child_process(int jx, int num_processes, int *sleep_times,
+void child_process(int child_index, int num_processes, int *sleep_times,
                    int pattern_type) {
-    printf("Process %d (PID: %d): starting\n", jx, getpid());
+    printf("Process %d (PID: %d): starting\n", child_index, getpid());
 
-    if (pattern_type == 2 && jx < num_processes - 1) {
-        printf("Process %d (PID: %d) creating child %d\n", jx, getpid(),
-               jx + 1);
+    if (pattern_type == 2 && child_index < num_processes - 1) {
+        printf("Process %d (PID: %d) creating child %d\n", child_index,
+               getpid(), child_index + 1);
     }
 
-    printf("Process %d (PID: %d), sleeping for %d seconds\n", jx, getpid(),
-           sleep_times[jx]);
-    sleep(sleep_times[jx]);
+    printf("Process %d (PID: %d), sleeping for %d seconds\n", child_index,
+           getpid(), sleep_times[child_index]);
+    sleep(sleep_times[child_index]);
 
-    printf("Process %d (PID: %d) has finished sleeping\n", jx, getpid());
+    printf("Process %d (PID: %d) has finished sleeping\n", child_index,
+           getpid());
     exit(0);
 }
 
@@ -72,6 +73,7 @@ void fork_processes(int num_processes, int pattern_type) {
             } else if (pid == 0) {
                 if (iz == 0)
                     printf("Main created Process 0 (PID: %d)\n", getpid());
+
                 printf("Process %d (PID: %d), will sleep for %d seconds after "
                        "creating process %d\n",
                        iz, getpid(), sleep_times[iz], iz + 1);
@@ -81,7 +83,7 @@ void fork_processes(int num_processes, int pattern_type) {
                 child_array[iz] = pid;
 
                 if (pattern_type == 2 && iz == 0)
-                    printf("Parent created Process 0 (PID: %d)\n", pid);
+                    printf("Main created Process 0 (PID: %d)\n", pid);
             }
         }
 
